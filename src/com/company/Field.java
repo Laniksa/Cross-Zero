@@ -48,7 +48,7 @@ public class Field {
         }
 
         return ch;
-    }
+    }   
 
     public static char[][] changeMasPlayer2(Scanner scan){//ход 2 игрока
         System.out.println("Ход "+Player.player2+" запишите координату:  X");
@@ -66,6 +66,22 @@ public class Field {
         }
 
         return ch;
+    }
+
+    public static void winningOptions(char ch[][], char simbol, Player player){
+        if (ch[0][0]==ch[0][1] && ch[0][0]==ch[0][2] && ch[0][0]==simbol ||
+                ch[1][0]==ch[1][1] && ch[1][0]==ch[1][2] && ch[1][0]==simbol ||
+                ch[2][0]==ch[2][1] && ch[2][0]==ch[2][2] && ch[2][0]==simbol ||
+
+                ch[0][0]==ch[1][0] && ch[0][0]==ch[2][0] && ch[0][0]==simbol ||
+                ch[0][1]==ch[1][1] && ch[0][1]==ch[2][1] && ch[0][1]==simbol ||
+                ch[0][2]==ch[1][2] && ch[0][2]==ch[2][2] && ch[0][2]==simbol ||
+
+                ch[0][0]==ch[1][1] && ch[0][0]==ch[2][2] && ch[0][0]==simbol){
+
+            System.out.println("Выиграл "+player);
+        }
+
     }
 
 }
