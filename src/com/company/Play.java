@@ -8,12 +8,20 @@ public class Play {
     public static void createPlayer(Scanner scan){
 
         System.out.println("Введите имя 1 игрока");
-        Player.player1.setName(scan.nextLine());
+        String name1 = scan.nextLine();
+
+        Player.player1 = new Player(Player.player1.setName(name1)) ;
+
         System.out.println("Введите имя 2 игрока");
-        Player.player2.setName(scan.nextLine());
+        String name2 = scan.nextLine();
+        Player.player2.setName(name2);
     }
 
-    public static void start (Player player1, Player player2, Scanner scan){
+    public static void start (Scanner scan){
+        createPlayer(scan);
+        System.out.println((Field.mas()));
+        System.out.println(Field.changeMasPlayer1(scan));
+        System.out.println(Field.changeMasPlayer2(scan));
 
     }
 }
