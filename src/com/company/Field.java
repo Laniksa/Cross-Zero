@@ -33,7 +33,7 @@ public class Field {
     }
 
     public static char[][] changeMasPlayer1(Scanner scan){//ход 1 игрока
-        System.out.println("Ход "+Player.player1+" запишите координату:  X");
+        System.out.println("Ход "+Player.player1.getName()+" запишите координату:  X");
         int numRow = scan.nextInt();
         System.out.println("Запишите координату: X");
         int numCol = scan.nextInt();
@@ -51,7 +51,7 @@ public class Field {
     }   
 
     public static char[][] changeMasPlayer2(Scanner scan){//ход 2 игрока
-        System.out.println("Ход "+Player.player2+" запишите координату:  X");
+        System.out.println("Ход "+Player.player2.getName()+" запишите координату:  X");
         int numRow = scan.nextInt();
         System.out.println("Запишите координату: Y");
         int numCol = scan.nextInt();

@@ -3,8 +3,8 @@ package com.company;
 import java.util.Scanner;
 
 public class Player {
-    public static Player player1;
-    public static Player player2;
+    public static Player player1 = new Player("player1");
+    public static Player player2 = new Player("player2");
     private String name;
     private Scanner scan = new Scanner(System.in);
 
